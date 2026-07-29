@@ -183,6 +183,24 @@ body{background:var(--bg);min-height:100vh}
 .why-item strong{color:var(--txt);font-weight:600}
 .why-icon{flex-shrink:0;width:16px;height:16px;margin-top:1px}
 .why-icon svg{width:16px;height:16px;display:block;stroke:var(--o);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dir-list{list-style:none;padding:0;margin:0.6rem 0 1rem;display:flex;flex-direction:column;gap:0.65rem}
+.dir-item{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.7;color:var(--txt2)}
+.dir-item strong{color:var(--txt);font-weight:500}
+.dir-icon{flex-shrink:0;width:17px;height:17px;margin-top:3px}
+.dir-icon svg{width:17px;height:17px;display:block;stroke:var(--o);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cs-video-embed{margin-top:1.25rem;position:relative;width:100%;aspect-ratio:16/9;background:#0F0E0D;border:1px solid rgba(255,255,255,0.08);border-radius:8px;overflow:hidden}
+.cs-video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
+.byline-imdb{flex-shrink:0;display:inline-flex;align-items:center;text-decoration:none;transition:transform 0.15s ease}
+.byline-imdb:hover{transform:translateY(-1px)}
+.byline-imdb img{height:22px;width:auto;display:block;border-radius:3px}
+.trust-strip{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1.6rem;padding:1.15rem 0 0.35rem}
+.trust-logo{width:auto;object-fit:contain;display:block;opacity:0.9}
+.trust-logo.discovery{height:22px}
+.trust-logo.nbc{height:15px}
+.trust-logo.bbc{height:24px}
+.trust-emmy{display:inline-flex;flex-direction:column;align-items:center;line-height:1.1;text-align:center}
+.trust-emmy .n{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.03em;color:var(--o);line-height:1}
+.trust-emmy .t{font-family:'Oswald',sans-serif;font-size:8px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;color:var(--txt3);margin-top:1px}
 .idea-tag{margin-top:10px;font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:0.12em;color:var(--o);text-transform:uppercase;font-weight:600}
 .idea-tag a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--o)}
 .idea-tag a:hover{border-bottom-style:solid}
@@ -402,6 +420,17 @@ body{background:var(--bg);min-height:100vh}
       <div class="byline-name">Prepared by Tom Langan · Founder, Talex Media</div>
       <div class="byline-sub">Author of <em>Legendeering</em></div>
     </div>
+    <a class="byline-imdb" href="https://www.imdb.com/name/nm5209355/" target="_blank" rel="noopener" aria-label="Tom Langan on IMDb">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" alt="IMDb"/>
+    </a>
+  </div>
+
+  <!-- Broadcaster trust strip, below the byline -->
+  <div class="trust-strip">
+    <img class="trust-logo discovery" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Discovery_Channel_-_Logo_2019.svg" alt="Discovery"/>
+    <img class="trust-logo nbc" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/NBCUniversal_Logo.svg" alt="NBCUniversal"/>
+    <img class="trust-logo bbc" src="https://upload.wikimedia.org/wikipedia/commons/4/41/BBC_Logo_2021.svg" alt="BBC"/>
+    <span class="trust-emmy"><span class="n">2×</span><span class="t">Emmy Award Nominee</span></span>
   </div>
 
   <!--
@@ -604,7 +633,7 @@ body{background:var(--bg);min-height:100vh}
       <div class="idea-body">
         <div class="idea-scale">The Series · Flagship, ongoing</div>
         <div class="idea-title">"Mission Critical"</div>
-        <div class="idea-desc">Every system Inadev rebuilds started as a problem a real person feels, whether that's a veteran waiting months on a benefits decision, a small business lost in a federal portal, or someone stuck on hold with software built decades ago. Those people never see the team that finally fixes it.<br/><br/><em>Mission Critical</em> is a documentary series about what it actually takes to fix one of those problems, told one public-facing government system at a time. Each episode follows the person who lives with the old system and the team that rebuilds the thing behind it, staying on the human side of the work so nothing sensitive ever goes on camera.<br/><br/>You meet the person on the wrong end of a system that hasn't been updated in a generation, you watch the engineers and designers who get called in to rebuild it, and you're there when the new version finally works.<br/><br/><em>Vox (the explainer channel on YouTube that takes one tangled system and makes millions of people finally understand how it works)</em> is the closest thing to this online, and pointing that same instinct at the public services your teams quietly modernize turns "digital modernization" from a phrase on a slide into a story people actually feel.</div>
+        <div class="idea-desc">Every system Inadev rebuilds started as a problem a real person feels, whether that's a veteran waiting months on a benefits decision, a small business lost in a federal portal, or someone stuck on hold with software built decades ago. Those people never see the team that finally fixes it.<br/><br/><em>Mission Critical</em> is a documentary series about what it actually takes to fix one of those problems, told one public-facing government system at a time. Each episode follows the person who lives with the old system and the team that rebuilds the thing behind it, staying on the human side of the work so nothing sensitive ever goes on camera.<br/><br/>You meet the person on the wrong end of a system that hasn't been updated in a generation, you watch the engineers and designers who get called in to rebuild it, and you're there when the new version finally works.<br/><br/><em>Vox (the explainer channel on YouTube that takes one tangled system and makes millions of people finally understand how it works)</em> does this for complicated subjects every day. Pointing that same approach at the public services your teams modernize makes the work clear and easy to care about.</div>
         <div class="why-block">
           <div class="why-label">Why long-form episodic content wins long-term</div>
           <div class="why-list">
@@ -621,13 +650,13 @@ body{background:var(--bg);min-height:100vh}
       <div class="idea-body">
         <div class="idea-scale">A Single Film · one-time</div>
         <div class="idea-title">"The Sky Isn't The Limit"</div>
-        <div class="idea-desc">Right now more than sixteen thousand people follow Inadev on LinkedIn, and not one of them has ever seen the company on video. The site says the sky isn't the limit, the feed is all text and image cards, and there's no YouTube channel, so the people behind the mission stay invisible.<br/><br/><em>The Sky Isn't The Limit</em> is one film rather than a series, about three minutes, made for the homepage and the careers page. It puts faces to the company: the engineers and designers who actually build the work, the leaders setting the direction, and what it feels like to modernize the systems millions of people depend on. Inadev is the subject, told through its own people, with nothing sensitive ever on camera.<br/><br/>Someone lands on the site deciding whether to trust you with a program, or whether to send you a résumé. Three minutes later they've met the team behind the promise, and a line that reads like a slogan finally has people standing behind it.<br/><br/>It's also the cleanest single project to start with. One shoot, one deadline, one finished film that does the job the homepage and the careers page can only describe, and it gives the series above its first real proof of concept.</div>
+        <div class="idea-desc">More than sixteen thousand people follow Inadev on LinkedIn, and the brand promises that the sky isn't the limit. The people who make that true, the engineers and designers behind the work, are the ones worth putting on camera.<br/><br/><em>The Sky Isn't The Limit</em> is one film rather than a series, about three minutes, made for the homepage and the careers page. It puts faces to the company: the engineers and designers who actually build the work, the leaders setting the direction, and what it feels like to modernize the systems millions of people depend on. Inadev is the subject, told through its own people, with nothing sensitive ever on camera.<br/><br/>Someone deciding whether to trust you with a program, or whether to send you a résumé, watches three minutes and comes away having met the team behind the promise.<br/><br/>It's also the cleanest single project to start with. One shoot, one deadline, one finished film that puts real faces to the company, and it gives the series above its first real proof of concept.</div>
         <div class="why-block">
           <div class="why-label">Why one film is worth making on its own</div>
           <div class="why-list">
             <div class="why-item"><span class="why-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><span>It's <strong>one project with one deadline</strong>, which makes it the easiest way to see how we work.</span></div>
             <div class="why-item"><span class="why-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span>Legendeering <strong>leads with story</strong>, because a promise this big only lands when you can see the people making it.</span></div>
-            <div class="why-item"><span class="why-icon"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span><span>It fills the <strong>single most-missing asset</strong>, a face for a company sixteen thousand people follow but have never seen.</span></div>
+            <div class="why-item"><span class="why-icon"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span><span>It fills the <strong>single most-missing asset</strong>, a face for a company sixteen thousand people follow.</span></div>
           </div>
         </div>
       </div>
@@ -674,12 +703,12 @@ body{background:var(--bg);min-height:100vh}
   <div class="section-block">
     <p>Legendeering is Talex's proprietary strategy. The core principle is straightforward: lead with value, always. The brand earns trust by giving without expectation, and that trust grows over time because people keep choosing to watch.</p>
     <p>Five directives drive it:</p>
-    <ul style="list-style:none;padding:0;margin:0.5rem 0 1rem">
-      <li style="position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.7;color:var(--txt2)"><span style="position:absolute;left:4px;top:-1px;color:var(--o);font-weight:700;font-size:18px;line-height:1">·</span><strong style="color:var(--txt);font-weight:500">Give Without Expectation.</strong> Value delivered without strings. The kind of generosity that builds loyalty money cannot buy.</li>
-      <li style="position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.7;color:var(--txt2)"><span style="position:absolute;left:4px;top:-1px;color:var(--o);font-weight:700;font-size:18px;line-height:1">·</span><strong style="color:var(--txt);font-weight:500">Be Relentlessly Authentic.</strong> Say true things. Show real work. Speak like a human being.</li>
-      <li style="position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.7;color:var(--txt2)"><span style="position:absolute;left:4px;top:-1px;color:var(--o);font-weight:700;font-size:18px;line-height:1">·</span><strong style="color:var(--txt);font-weight:500">It's Not About You. It's About Them.</strong> The audience has to come first. It's all about their wants and needs and making something they will choose to watch.</li>
-      <li style="position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.7;color:var(--txt2)"><span style="position:absolute;left:4px;top:-1px;color:var(--o);font-weight:700;font-size:18px;line-height:1">·</span><strong style="color:var(--txt);font-weight:500">Start With Story, Follow With Facts.</strong> Story gives information shape, context, and emotional weight. Facts alone rarely move people.</li>
-      <li style="position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.7;color:var(--txt2)"><span style="position:absolute;left:4px;top:-1px;color:var(--o);font-weight:700;font-size:18px;line-height:1">·</span><strong style="color:var(--txt);font-weight:500">Consistency Is Key.</strong> Trust is built in moments, repeated over time.</li>
+    <ul class="dir-list">
+      <li class="dir-item"><span class="dir-icon"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></span><span><strong>Give Without Expectation.</strong> Value delivered without strings. The kind of generosity that builds loyalty money cannot buy.</span></li>
+      <li class="dir-item"><span class="dir-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M8 12l3 3 5-6"/></svg></span><span><strong>Be Relentlessly Authentic.</strong> Say true things. Show real work. Speak like a human being.</span></li>
+      <li class="dir-item"><span class="dir-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span><strong>It's Not About You. It's About Them.</strong> The audience has to come first. It's all about their wants and needs and making something they will choose to watch.</span></li>
+      <li class="dir-item"><span class="dir-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span><strong>Start With Story, Follow With Facts.</strong> Story gives information shape, context, and emotional weight. Facts alone rarely move people.</span></li>
+      <li class="dir-item"><span class="dir-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span><strong>Consistency Is Key.</strong> Trust is built in moments, repeated over time.</span></li>
     </ul>
     <p>Inadev are experts at building the technology that runs the mission. Talex would add the long-form video: documentary films and series built on the work you already do. The three concepts above come straight out of this method, built for a firm at your scale.</p>
   </div>
@@ -735,6 +764,9 @@ body{background:var(--bg);min-height:100vh}
       <div class="cs-section-label">The Result</div>
       <div class="cs-section-body">On December 15, 2025, the NY State Gaming Commission awarded Resorts World NYC one of only three downstate commercial gaming licenses. Talex Media's content supported one of the most consequential licensing decisions in NYC's recent history.</div>
     </div>
+    <div class="cs-video-embed">
+      <iframe src="https://player.vimeo.com/video/1197837461?h=b1f296a8c1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen loading="lazy" title="Resorts World NYC · Featured Video"></iframe>
+    </div>
     <div class="cs-footer-meta">NYC Gaming License Awarded Dec 15, 2025 · 10+ Videos Produced · $5.5B Investment · Spring 2026 Opening</div>
   </div>
 
@@ -767,6 +799,9 @@ body{background:var(--bg);min-height:100vh}
       <div class="cs-section-label">The Result</div>
       <div class="cs-section-body">Since the partnership began, Sobo & Sobo has grown from a NY-focused firm into a multi-state legal practice with offices in NY, CT, NJ, IL, OH, PA, and WI. Talex Media's campaigns have accompanied every stage of that expansion.</div>
     </div>
+    <div class="cs-video-embed">
+      <iframe src="https://player.vimeo.com/video/1197837545?h=26cd419847" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen loading="lazy" title="Sobo &amp; Sobo · Featured Video"></iframe>
+    </div>
     <div class="cs-footer-meta">5+ Year Partnership · All Commercial Campaigns · 7 States: NY, CT, NJ, IL, OH, PA, WI</div>
   </div>
 
@@ -798,6 +833,9 @@ body{background:var(--bg);min-height:100vh}
     <div class="cs-section">
       <div class="cs-section-label">The Result</div>
       <div class="cs-section-body">In August 2025, Elizabeth Seton Children's broke ground on their new 96-bed young adult center in White Plains, NY, the first standalone facility of its kind in the United States, providing care for young adults aged 18 to 35 with complex medical needs. The facility is expected to open in January 2028.</div>
+    </div>
+    <div class="cs-video-embed">
+      <iframe src="https://player.vimeo.com/video/1197837295?h=1a1b3c715b" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen loading="lazy" title="Elizabeth Seton Children's · Featured Video"></iframe>
     </div>
     <div class="cs-footer-meta">First standalone young adult complex-care facility in the U.S. · 96 beds · $156M · Groundbreaking Aug 2025</div>
   </div>
